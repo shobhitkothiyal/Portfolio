@@ -1,0 +1,69 @@
+/* Custom Glassmorphism Utility */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll Hide Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}
+
+/* Custom Text Masking */
+.text-mask {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Blur Effect on Scroll */
+.nav-scrolled {
+    background: rgba(5, 5, 5, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific component fixes */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
